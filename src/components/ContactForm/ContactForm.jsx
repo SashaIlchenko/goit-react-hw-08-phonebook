@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from "react-redux";
 import { Formik, Field } from 'formik';
 import { Form, FormField, AddBtn } from './ContactForm.styled';
-import { addContact } from 'Redux/Operations';
+import { addContact } from 'Redux/contacts/Operations';
 import { useSelector } from 'react-redux';
-import { selectContacts } from 'Redux/Selectors';
+import { selectContacts } from 'Redux/contacts/Selectors';
 const initialValues = {
     name: '',
     number: '',

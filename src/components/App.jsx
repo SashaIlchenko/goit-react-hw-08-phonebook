@@ -1,4 +1,4 @@
-import { fetchContacts } from 'Redux/Operations';
+import { fetchContacts } from 'Redux/contacts/Operations';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from "react";
 import { AppBar } from './AppBar/AppBar';
@@ -6,7 +6,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { Container } from './App.styled';
-import { selectIsLoading, selectError } from 'Redux/Selectors';
+import { selectIsLoading, selectError } from 'Redux/contacts/Selectors';
 import { RegisterForm } from './RegisterForm/RegisterForm';
 import { LoginForm } from './LoginForm/LoginForm';
 export const App = () => {

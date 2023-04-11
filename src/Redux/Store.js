@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { ValueReducer } from "./ValueSlice";
-import { FilterReduser } from "./FilterSlice";
+import { ValueReducer } from "./contacts/ValueSlice";
+import { FilterReduser } from "./contacts/FilterSlice";
 
 
 
