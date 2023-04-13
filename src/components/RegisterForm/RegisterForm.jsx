@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { register } from "Redux/auth/Operations";
-import { selectUser } from "Redux/auth/Selectors";
+// import { selectUser } from "Redux/auth/Selectors";
 
 const initialValues = {
     name: '',
