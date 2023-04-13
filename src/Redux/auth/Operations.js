@@ -20,7 +20,7 @@ export const register = createAsyncThunk(
     'auth/register',
     async (credentials, { rejectWithValue }) => {
         try {
-            const res = await axios.post('/users/signup', { ...credentials });
+            const res = await axios.post('/users/signup', credentials);
             setAuthHeader(res.data.token);
             // token.set(data.token);
             // console.log(data)

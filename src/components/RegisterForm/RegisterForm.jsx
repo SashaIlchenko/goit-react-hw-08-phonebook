@@ -13,7 +13,7 @@ export const RegisterForm = () => {
     // const user = useSelector(selectUser);
     const handleSubmit = (values, { resetForm }) => {
         dispatch(register({
-            values
+            ...values
         }))
         console.log(values)
         resetForm();

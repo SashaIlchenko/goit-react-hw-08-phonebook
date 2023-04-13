@@ -3,6 +3,8 @@
 import { lazy } from "react";
 import { Layout } from "./Layout";
 import { Route, Routes } from 'react-router-dom';
+import { PrivateRoute } from "./PrivateRoute";
+import { RestrictedRoute } from "./RestrictedRoute";
 // import { PrivateRoute } from './PrivateRoute';
 // import { RestrictedRoute } from './RestrictedRoute';
 // import { AppBar } from './AppBar/AppBar';
@@ -25,20 +27,20 @@ export const App = () => {
         <Route index element={<HomePage />} />
         <Route
           path="/register"
-          element={<RegisterPage />
-            // <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
           }
         />
         <Route
           path="/login"
-          element={<LoginPage />
-            // <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+          element={
+            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
           }
         />
         <Route
           path="/contacts"
-          element={<PhonebookPage />
-            // <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
+          element={
+            <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
           }
         />
       </Route>
