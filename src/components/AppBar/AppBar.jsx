@@ -1,7 +1,8 @@
 // import { NavLink } from "react-router-dom";
+import { Navigation } from "components/Navigation/Navigation"
 import { AuthNav } from "components/AuthNav/AuthNav"
 import { UserMenu } from "components/UserMenu/UserMenu"
 export const AppBar = () => {
-    return <header><nav>Home</nav>
+    return <header><Navigation />
         <AuthNav /><UserMenu /></header>
 }

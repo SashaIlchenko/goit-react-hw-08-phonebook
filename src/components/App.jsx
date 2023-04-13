@@ -1,30 +1,47 @@
-import { fetchContacts } from 'Redux/contacts/Operations';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from "react";
-import { AppBar } from './AppBar/AppBar';
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactList } from './ContactList/ContactList';
-import { Filter } from './Filter/Filter';
-import { Container } from './App.styled';
-import { selectIsLoading, selectError } from 'Redux/contacts/Selectors';
-import { RegisterForm } from './RegisterForm/RegisterForm';
-import { LoginForm } from './LoginForm/LoginForm';
+// import { fetchContacts } from 'Redux/contacts/Operations';
+// import { useDispatch, useSelector } from 'react-redux';
+import { lazy } from "react";
+import { Layout } from "./Layout";
+import { Route, Routes } from 'react-router-dom';
+// import { PrivateRoute } from './PrivateRoute';
+// import { RestrictedRoute } from './RestrictedRoute';
+// import { AppBar } from './AppBar/AppBar';
+// import { ContactForm } from './ContactForm/ContactForm';
+// import { ContactList } from './ContactList/ContactList';
+// import { Filter } from './Filter/Filter';
+// import { Container } from './App.styled';
+// import { selectIsLoading, selectError } from 'Redux/contacts/Selectors';
+// import { RegisterForm } from './RegisterForm/RegisterForm';
+// import { LoginForm } from './LoginForm/LoginForm';
+const HomePage = lazy(() => import('../Pages/Home'));
+const LoginPage = lazy(() => import('../Pages/Login'));
+const RegisterPage = lazy(() => import('../Pages/Register'));
+const PhonebookPage = lazy(() => import('../Pages/Phonebook'));
+
 export const App = () => {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch])
   return (
-    <Container ><AppBar />
-      <RegisterForm />
-      <LoginForm />
-      <h1>Phonebook</h1>
-      <ContactForm />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
-    </Container >)
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route
+          path="/register"
+          element={<RegisterPage />
+            // <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
+          }
+        />
+        <Route
+          path="/login"
+          element={<LoginPage />
+            // <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+          }
+        />
+        <Route
+          path="/contacts"
+          element={<PhonebookPage />
+            // <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
+          }
+        />
+      </Route>
+    </Routes>
+  )
 }
