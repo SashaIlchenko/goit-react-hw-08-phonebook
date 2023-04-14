@@ -4,6 +4,7 @@ import { Formik } from 'formik';
 import { Form, FormField, Input, AddBtn } from './ContactForm.styled';
 import { addContact } from 'Redux/contacts/Operations';
 import { selectContacts } from 'Redux/contacts/Selectors';
+import { toast } from 'react-hot-toast';
 const initialValues = {
     name: '',
     number: '',
@@ -16,7 +17,8 @@ export const ContactForm = () => {
         const newContact = contacts.find(contact => contact.name.toLowerCase() === values.name.toLowerCase())
         if (newContact) {
             resetForm();
-            return alert(`${values.name} is already in contacts`);
+            return toast.error(`${values.name} is already in contacts`)
+
         }
         dispatch(addContact({
             ...values,
