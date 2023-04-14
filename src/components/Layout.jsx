@@ -6,12 +6,13 @@ import { Container } from './App.styled';
 
 export const Layout = () => {
     return (
-        <Container>
+        <>
             <AppBar />
-            <Suspense fallback={null}>
-                <Outlet />
-            </Suspense>
-            <Toaster position="top-right" reverseOrder={false} />
-        </Container>
+            <Container>
+                <Suspense fallback={null}>
+                    <Outlet />
+                </Suspense>
+                <Toaster position="top-right" reverseOrder={false} />
+            </Container></>
     );
 };

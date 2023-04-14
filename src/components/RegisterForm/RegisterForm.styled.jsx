@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Form as FormikForm } from 'formik';
 import { Field } from "formik";
 
+
 export const Form = styled(FormikForm)`
 width: 300px;
 padding: 30px;
@@ -15,17 +16,24 @@ gap: 10px;`
 
 export const FormField = styled.label`
 display: flex;
-flex-direction: column;
+flex-direction:column;
 color: #696969;
 font-size:24px;
-font-weight: 600;`
+font-weight: 600;
+`
+
 export const Input = styled(Field)`
 margin-top:10px;
 padding-left: 15px;
 border-radius: 3px;
 border: none;
 height: 50px;`
-export const AddBtn = styled.button`
+
+export const Title = styled.h1`
+color: #696969;
+margin: 0 auto;`
+
+export const SubBtn = styled.button`
 font-size:18px;
 font-weight: 500;
 margin-top: 10px;

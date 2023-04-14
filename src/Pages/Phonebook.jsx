@@ -5,6 +5,7 @@ import { ContactForm } from '../components/ContactForm/ContactForm';
 import { ContactList } from '../components/ContactList/ContactList';
 import { Filter } from '../components/Filter/Filter';
 import { selectIsLoading, selectError } from 'Redux/contacts/Selectors';
+import { Title, ListTitle, Container } from './Phonebook.styled';
 
 const PhonebookPage = () => {
     const dispatch = useDispatch();
@@ -15,14 +16,13 @@ const PhonebookPage = () => {
     }, [dispatch])
     return (
 
-        <>
-            <h1>Phonebook</h1>
+        < Container>
+            <Title>Phonebook</Title>
             <ContactForm />
             {isLoading && !error && <b>Request in progress...</b>}
-            <h2>Contacts</h2>
+            <ListTitle>Contacts</ListTitle>
             <Filter />
-            <ContactList /></>)
-
+            <ContactList /></ Container>)
 }
 
 export default PhonebookPage;

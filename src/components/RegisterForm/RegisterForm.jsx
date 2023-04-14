@@ -1,7 +1,7 @@
-import { Formik, Form, Field } from "formik";
+import { Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "Redux/auth/Operations";
-// import { selectUser } from "Redux/auth/Selectors";
+import { Form, FormField, Input, Title, SubBtn } from "./RegisterForm.styled";
 
 const initialValues = {
     name: '',
@@ -10,7 +10,6 @@ const initialValues = {
 };
 export const RegisterForm = () => {
     const dispatch = useDispatch();
-    // const user = useSelector(selectUser);
     const handleSubmit = (values, { resetForm }) => {
         dispatch(register({
             ...values
@@ -20,24 +19,24 @@ export const RegisterForm = () => {
     }
     return <Formik initialValues={initialValues}
         onSubmit={handleSubmit}>
-        <Form><label>Name<Field
+        <Form><Title >Registration form</Title ><FormField>Name<Input
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             placeholder="Name"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required /></label>
-            <label>Email<Field
+            required /></FormField>
+            <FormField>Email<Input
                 type="email"
                 name="email"
                 placeholder="Email"
-                required /></label>
-            <label>Password<Field
+                required /></FormField>
+            <FormField>Password<Input
                 type='password'
                 name='password'
                 placeholder="Password"
                 required
-            /></label>
-            <button type='submit'>Register</button></Form>
+            /></FormField>
+            <SubBtn type='submit'>Register</SubBtn></Form>
     </Formik>
 }

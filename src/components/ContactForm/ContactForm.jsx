@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from "react-redux";
-import { Formik, Field } from 'formik';
-import { Form, FormField, AddBtn } from './ContactForm.styled';
+import { Formik } from 'formik';
+import { Form, FormField, Input, AddBtn } from './ContactForm.styled';
 import { addContact } from 'Redux/contacts/Operations';
 import { selectContacts } from 'Redux/contacts/Selectors';
 const initialValues = {
@@ -30,20 +30,22 @@ export const ContactForm = () => {
     >
         <Form>
             < FormField>Name
-                <Field
+                <Input
                     type="text"
                     name="name"
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     required
+                    placeholder="Name"
                 /></ FormField>
             < FormField>Number
-                <Field
+                <Input
                     type="tel"
                     name="number"
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required
+                    placeholder="Number"
                 />
             </ FormField>
             <AddBtn type="submit">Add contact</AddBtn>
