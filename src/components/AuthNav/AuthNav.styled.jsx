@@ -13,3 +13,6 @@ padding:4px;
 &:hover {
  opacity: 1;
 }`
+
+export const Wrapper = styled.div`
+margin-right:40px;`
