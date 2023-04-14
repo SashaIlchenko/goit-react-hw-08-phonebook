@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.1866ed1c.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.c662f62f.js",
     "static/js/586.9ecb3580.chunk.js": "/goit-react-hw-08-phonebook/static/js/586.9ecb3580.chunk.js",
     "static/js/626.6b40ab0f.chunk.js": "/goit-react-hw-08-phonebook/static/js/626.6b40ab0f.chunk.js",
     "static/js/255.11d293ff.chunk.js": "/goit-react-hw-08-phonebook/static/js/255.11d293ff.chunk.js",
-    "static/js/239.9b968b8e.chunk.js": "/goit-react-hw-08-phonebook/static/js/239.9b968b8e.chunk.js",
+    "static/js/239.8415607c.chunk.js": "/goit-react-hw-08-phonebook/static/js/239.8415607c.chunk.js",
     "static/js/705.34c10a8a.chunk.js": "/goit-react-hw-08-phonebook/static/js/705.34c10a8a.chunk.js",
     "static/media/Phonebook.jpg": "/goit-react-hw-08-phonebook/static/media/Phonebook.1294df4da383ddc976ae.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-08-phonebook/static/css/main.7acaea2f.css.map",
-    "main.1866ed1c.js.map": "/goit-react-hw-08-phonebook/static/js/main.1866ed1c.js.map",
+    "main.c662f62f.js.map": "/goit-react-hw-08-phonebook/static/js/main.c662f62f.js.map",
     "586.9ecb3580.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/586.9ecb3580.chunk.js.map",
     "626.6b40ab0f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/626.6b40ab0f.chunk.js.map",
     "255.11d293ff.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/255.11d293ff.chunk.js.map",
-    "239.9b968b8e.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/239.9b968b8e.chunk.js.map",
+    "239.8415607c.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/239.8415607c.chunk.js.map",
     "705.34c10a8a.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/705.34c10a8a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.1866ed1c.js"
+    "static/js/main.c662f62f.js"
   ]
 }
